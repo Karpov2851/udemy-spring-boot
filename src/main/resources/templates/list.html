@@ -1,0 +1,23 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Udemy Spring 5</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td>Id</td>
+        <td>Title</td>
+        <td>Publisher</td>
+    </tr>
+
+
+    <tr th:each="book : ${books}">
+        <td th:text="${book.bookId}"></td>
+        <td th:text="${book.title}"></td>
+        <td th:text="${book.publisher.publisherName}"></td>
+    </tr>
+
+</table>
+
+</body>
+</html>
